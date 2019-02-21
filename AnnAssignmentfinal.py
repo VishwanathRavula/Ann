@@ -39,6 +39,13 @@ def calculate_loss(model,X,Y):
     z1, a1, z2, out = feed_forward(model, X);
 #    mse = (np.square(np.subtract(Y, out)));
     mse=Y-out;
+    temp=[]
+    for i in range(len(Y)):
+        a = Y[i]-out[i];
+        a = a*a;
+        a = 0.5*a;
+        temp.append(a);
+        a=1
     print();
     #print("---------------",out);
     return mse;
