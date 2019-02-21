@@ -47,6 +47,7 @@ def calculate_loss(model,X,Y):
         temp.append(a);
         a=1
     print();
+    mse=temp;
     #print("---------------",out);
     return mse;
 
